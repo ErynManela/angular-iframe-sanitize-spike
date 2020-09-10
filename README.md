@@ -1,27 +1,24 @@
 # IframeApp
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.2.
 
-## Development server
+Experiment app to allow the url for an iframe to be sanitized using Angular's internal sanitizer implementation.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+This experiment places the whitelist as objects in the environments.ts files but in the final version this should be supplied via 
+a service that will be forwards-looking for when there is a system-server and not just the localhost, so it should be smart enough to 
+supply the correct domains, ports, protocol, and path.
 
-## Code scaffolding
+The iframe source url is set within the app.component.ts and set as the [src] attribute of the iframe in the app.component.html
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+The meat of the code is in app/whitelist-sanitizer.service.ts
+will need unit tests
 
-## Build
+the service is provided as Sanitizer and DomSanitizer providers in app.module.ts, in Raider it should be provided in the device frontent application module.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+## Running the spike project
+Running this depends on having some other web server running on port 4300, or edit 
 
-## Running unit tests
+Run `ng serve --port 4200` for a dev server. 
+On any other angular project, run `ng server --port 4300` for the app which is wrapped inside
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Navigate to `http://localhost:4200/`. 
 
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
