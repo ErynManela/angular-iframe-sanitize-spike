@@ -8,5 +8,6 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'iframe-app';
 
-  iframesrc = 'http://localhost:4300';
+  validiframesrc = 'https://angular.io';
+  invalidiframesrc = 'https//vuejs.org';
 }

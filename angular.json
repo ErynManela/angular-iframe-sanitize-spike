@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "iframe-app"
+    }
+  },
+  "defaultProject": "iframe-app",
+  "cli": {
+    "analytics": "f04fdb5e-f2a0-497b-a032-65dcf74147cc"
+  }
 }

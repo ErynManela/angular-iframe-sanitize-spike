@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  IFrameSanitizerWhitelist: [{protocol: 'http:', hostname: '127.0.0.1', ports: [4300]}, {protocol: 'http:', hostname: 'localhost', ports: [4300]}]
+  IFrameSanitizerWhitelist: [{protocol: 'https:', hostname: 'angular.io', port: ''}]
 };
 
 /*

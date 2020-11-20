@@ -9,7 +9,8 @@ supply the correct domains, ports, protocol, and path.
 
 The iframe source url is set within the app.component.ts and set as the [src] attribute of the iframe in the app.component.html
 
-The meat of the code is in app/whitelist-sanitizer.service.ts
+The whitelist checking function is defined in the app/app.module.ts and provided as an injection token
+The sanitizer override code is in app/resource-validation-dom-sanitizer.service.ts, by default it does not validate
 will need unit tests
 
 the service is provided as Sanitizer and DomSanitizer providers in app.module.ts, in Raider it should be provided in the device frontent application module.
@@ -18,7 +19,6 @@ the service is provided as Sanitizer and DomSanitizer providers in app.module.ts
 Running this depends on having some other web server running on port 4300, or edit 
 
 Run `ng serve --port 4200` for a dev server. 
-On any other angular project, run `ng server --port 4300` for the app which is wrapped inside
 
 Navigate to `http://localhost:4200/`. 
 

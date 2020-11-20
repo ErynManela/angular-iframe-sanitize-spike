@@ -1,7 +1,9 @@
 <div>
-This is a test app
-
-<div><iframe [src]='iframesrc'></iframe></div>
-
+<h1>Test app for iframe sanitization and validation in Angular 9+</h1>
+<h2>This div has an iframe which should be invalid and empty:</h2>
+<div style="border:2px solid black; width:800px; height:200px"><iframe [src]='invalidiframesrc' ></iframe></div>
+<div>
+<h2>This should load the angular.io home page</h2>
+<div style="border:2px solid black; width:800px; height:600px"><iframe [src]='validiframesrc' width="800" height="600"></iframe></div>
 
 </div>
